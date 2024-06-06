@@ -2,10 +2,12 @@
 
 ## Installation
 
+This application is a web-based tool that runs in any modern web browser:
+
 1. **Clone the Repository**
    - Use Git to clone the repository to your local machine:
      ```bash
-     git clone https://github.com/viks120/FlexionCodeReview
+     git clone https://github.com/viks120/FlexionCodeReview.git
      ```
    
 2. **Access the Application**
@@ -39,7 +41,7 @@ Here are the prioritized development tasks to enhance the application:
 ### 5. Microservices Conversion for API Integration
    - **Priority**: Low
    - Convert the application to microservices to enable third-party applications to utilize it.
-   - Create REST enddpoints.
+   - Create REST endpoints as per OpenAPI standards.
 
 ### 6. Data Storage
    - **Priority**: Low
