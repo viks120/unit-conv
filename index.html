@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexion Challenge</title>
+</head>
+<body>
+    <h1>Flexion Challenge</h1>
+    
+    <form>
+        <label for="input_numerical_value">Enter numerical nalue: </label><input type="number" name="input_numerical_value" id="input_numerical_value" placeholder="Enter numerical nalue" required /><br /><br />
+        <label for="input_unit_of_measure">Enter unit of measure: </label><input type="text" name="input_unit_of_measure" id="input_unit_of_measure" placeholder="Enter unit of measure" required /><br /><br />
+        <label for="target_unit_of_measure">Target unit of measure: </label><input type="text" name="target_unit_of_measure" id="target_unit_of_measure" placeholder="Target unit of measure" required /><br /><br />
+        <label for="student_response">Enter student response: </label><input type="text" name="student_response" id="student_response" placeholder="Enter student response" required /><br /><br /><br />
+        <button type="button" onclick="update_result()">Check Answer</button>
+    </form>
+    <br /><br />
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
