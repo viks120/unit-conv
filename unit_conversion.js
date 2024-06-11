@@ -3,7 +3,7 @@ function check_answer() {
     let authoritative_answer;
 
     const temperatures = ["Kelvin", "Celsius", "Fahrenheit", "Rankine"];
-    const voulmes = ["liters", "tablespoons", "cubic-inches", "cups", "cubic-feet", "gallons"];
+    const volumes = ["liters", "tablespoons", "cubic-inches", "cups", "cubic-feet", "gallons"];
 
     const input_numerical_value = parseFloat(document.getElementById("input_numerical_value").value);
     const input_unit_of_measure = document.getElementById("input_unit_of_measure").value;
@@ -14,10 +14,11 @@ function check_answer() {
         return "incorrect";
     }
 
-    authoritative_answer = get_authorative_answer(temperatures, voulmes, input_numerical_value, 
-        input_unit_of_measure, 
-        target_unit_of_measure, 
-        student_response);
+    authoritative_answer = get_authorative_answer(temperatures, 
+                                                volumes, input_numerical_value, 
+                                                input_unit_of_measure, 
+                                                target_unit_of_measure, 
+                                                student_response);
 
     if (authoritative_answer === "invalid" ) {
         return "invalid";
@@ -30,14 +31,14 @@ function check_answer() {
     }
 }
 
-function update_result() {
+function update_output() {
     result = check_answer();
     document.getElementById("result").innerHTML = '<b>Output:</b> ' + result;
 }
 
 
 function get_authorative_answer(temperatures, 
-                                voulmes, 
+                                volumes, 
                                 input_numerical_value, 
                                 input_unit_of_measure, 
                                 target_unit_of_measure) {
@@ -46,7 +47,7 @@ function get_authorative_answer(temperatures,
 
     if(temperatures.includes(input_unit_of_measure) && temperatures.includes(target_unit_of_measure)) {
         response = temperature_conversion(input_numerical_value, input_unit_of_measure, target_unit_of_measure);
-    } else if(voulmes.includes(input_unit_of_measure) && voulmes.includes(target_unit_of_measure)) {
+    } else if(volumes.includes(input_unit_of_measure) && volumes.includes(target_unit_of_measure)) {
         response = volume_conversion(input_numerical_value, input_unit_of_measure, target_unit_of_measure);
     } else {
         return "invalid";
