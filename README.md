@@ -1,7 +1,3 @@
-# Flexion Coding Challenge
-
-- Demo Link: [http://flexioncodingreviewdemo.s3-website.us-east-2.amazonaws.com/](http://flexioncodingreviewdemo.s3-website.us-east-2.amazonaws.com/)
-
 ## Installation
 
 This application is a web-based tool that runs in any modern web browser:
